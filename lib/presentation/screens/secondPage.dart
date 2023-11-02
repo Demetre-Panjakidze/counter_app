@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
 
-class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
+class SecondPage extends StatelessWidget {
+  const SecondPage({
+    super.key,
+    required this.color,
+    required this.title,
+  });
+
+  final String title;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+        backgroundColor: color,
+      ),
+      body: const Column(
+        children: [Text('hi')],
+      ),
+    );
   }
 }
